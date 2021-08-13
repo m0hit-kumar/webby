@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="CSS/style.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+
+    <body>
+        <nav>
+            <button onclick="mymenu()"><b>⁝ </b> </button>
+            <ul id="menu">
+                <li>
+
+
+                    <!-- link one -->
+                    <a href="#aboutMe"> About Me </a>
+                </li>
+                <li>
+                    <!-- link two -->
+                    <a href="#projects"> Projects </a>
+                </li>
+                <li>
+                    <!-- link three -->
+                    <a href="#cv"> CV </a>
+                </li>
+                <li>
+                    <!-- link four -->
+                    <a href="#contacts"> Contacts </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="quote">
+            <marquee behavior='scroll' direction='left' scrollamount='5' onmouseover='this.stop()'
+                onmouseout='this.start()'>
+                Technology that we have has a capability can change the world
+            </marquee>
+        </div>
+
+
+        <div class="slideshow-container">
+            <div class="mySlides1">
+                <img src="img_nature_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="img_snow_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides1">
+                <img src="img_mountains_wide.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+        </div>
+
+
+        <script>
+
+            var slideIndex = [1, 1];
+            var slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) { slideIndex[no] = 1 }
+                if (n < 1) { slideIndex[no] = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no] - 1].style.display = "block";
+            }
+            function mymenu() {
+                var x = document.getElementById("menu");
+                if (x.style.display === "none") {
+                    x.style.display = "flex";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+
+</html>

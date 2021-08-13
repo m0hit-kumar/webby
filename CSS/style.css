@@ -1,0 +1,128 @@
+nav {
+  width: 100vw;
+  background-color: #2c3e50;
+}
+
+li {
+  list-style: none;
+  margin: 1vh;
+  font-size: 3vh;
+}
+
+a {
+  text-decoration: none;
+
+  /*below I changed the color*/
+  color: aliceblue;
+  /*I added some padding*/
+  padding: 2vw;
+  /*also changed the font family but that's totally irrelevant*/
+  display: block;
+}
+a:hover {
+  background-color: #0e253b;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+body {
+  margin: 0;
+  /*this put the button on the left*/
+  align-self: flex-start;
+}
+
+button {
+  display: none;
+  /*this put the button on the left*/
+  align-self: flex-start;
+}
+.quote {
+  width: 100%;
+  background-color: red;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.quote marquee {
+  font-size: 2vh;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul {
+    flex-direction: column;
+  }
+
+  /* deletes margin on top or bottom of the a tag*/
+  li {
+    margin: 0;
+  }
+  /* makes sure that the a tag will take the entire screen*/
+  a {
+    display: block;
+  }
+  button {
+    /*makes the button visible*/
+    display: block;
+
+    /*since we are here, we can style it a little bit!*/
+    padding: 2vw;
+    font-size: 3vh;
+    background-color: #afe0ff;
+    border: none;
+
+    /*outline none removes the default blue border that appears anytime you click on the button*/
+    outline: none;
+
+    cursor: pointer;
+  }
+}
+
+.mySlides1,
+.mySlides2 {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover,
+.next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
